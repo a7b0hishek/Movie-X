@@ -126,9 +126,9 @@ This will start the development server at  ``` http://localhost:3000/  ``` , all
 * Create a new branch in your fork to make your changes.
 * Submit a pull request from your branch to the original repository, and we'll review your changes.
 
-Thank you for checking out our project! 
+Thank you for checking out my project! 
 
-
+Created by **a7b0hishek** – feel free to improve or customize!
 
 
 

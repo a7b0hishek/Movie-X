@@ -1,4 +1,102 @@
-# Movie-X
+# Movie-X 🎬
+
+A modern, responsive movie discovery application built with React.js and powered by The Movie Database (TMDB) API.
+
+## ✨ Features
+
+- 🔍 **Search Movies & TV Shows**: Find your favorite content instantly
+- 🎭 **Browse by Category**: Trending, Popular, Top Rated
+- 📱 **Responsive Design**: Works perfectly on all devices
+- 🎯 **Detailed Information**: Cast, crew, ratings, and recommendations
+- ⚡ **Fast Performance**: Optimized loading with lazy images
+- 🎨 **Modern UI**: Clean and intuitive interface
+
+## 🚀 Live Demo
+
+**[View Live Application](https://movie-x-orcin.vercel.app)**
+
+## 🛠️ Built With
+
+- **React.js** - Frontend framework
+- **Redux Toolkit** - State management
+- **React Router** - Navigation
+- **SCSS** - Styling
+- **TMDB API** - Movie data
+- **Vercel** - Deployment
+
+## 📱 Screenshots
+
+- Homepage with trending movies
+- Search functionality
+- Detailed movie pages
+- Responsive design
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/a7b0hishek/Movie-X.git
+cd Movie-X
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Set up environment variables
+- Get your API key from [TMDB](https://www.themoviedb.org/settings/api)
+- Update `src/config.js` with your credentials
+
+4. Start the development server
+```bash
+npm start
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📦 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+
+## 🔧 Configuration
+
+Update `src/config.js` with your TMDB API credentials:
+
+```javascript
+const API_BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = "your_api_key_here";
+const API_READ_ACCESS_TOKEN = "your_access_token_here";
+```
+
+## 🚀 Deployment
+
+This project is deployed on Vercel and automatically updates when changes are pushed to the main branch.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 👨‍💻 Author
+
+**Abhishek**
+- GitHub: [@a7b0hishek](https://github.com/a7b0hishek)
+
+---
+
+⭐ Give this project a star if you found it helpful!
 # MovieX : High-quality films for you
  - MovieX is a dynamic and engaging movie website that provides movie enthusiasts with a wide range of movies to explore and enjoy. The website is designed to be user-friendly and easy to navigate, with a variety of features that make it simple to find the perfect movie for any occasion.
 

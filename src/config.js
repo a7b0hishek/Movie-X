@@ -1,0 +1,9 @@
+// src/config.js
+// TODO: Replace the placeholder values with your actual API configuration
+
+
+const API_BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = "c1b4399e085b30fa5d88cb5869cf2bb1";
+const API_READ_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMWI0Mzk5ZTA4NWIzMGZhNWQ4OGNiNTg2OWNmMmJiMSIsIm5iZiI6MTc1NTc4MjYwNS4zMTEsInN1YiI6IjY4YTcxZGNkMjUzNWRlNTM2YzVkZDllMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.zB609g0DVXESLYxSGKMM0sHWk2rDrQFjRHp0PcPrik0";
+
+export { API_BASE_URL, API_KEY, API_READ_ACCESS_TOKEN };

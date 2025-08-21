@@ -1,5 +1,5 @@
 // src/config.js
-// TODO: Replace the placeholder values with your actual API configuration
+// TMDB API Configuration
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = "c1b4399e085b30fa5d88cb5869cf2bb1";

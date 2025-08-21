@@ -30,8 +30,7 @@ const VideosSection = ({ data, loading }) => {
                     <div className="videos">
                         
                         {data?.map((video)=>{
-                            
-                            
+                            return (
                             <div key={video?.id} className="videoItem" onClick={()=>{setVideoId(video?.key); setShow(true); }}>
                                  {/* {console.log(video.id,video.key)} */}
                                 <div className="videoThumbnail">
@@ -43,8 +42,8 @@ const VideosSection = ({ data, loading }) => {
                                     {video?.name}
                                 </div>
                             </div>
+                            );
                         })}
-                         video
                        
                     </div>
                 ) : (

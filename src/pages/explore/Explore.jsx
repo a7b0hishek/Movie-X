@@ -148,7 +148,7 @@ const Explore = () => {
                                 loader={<Spinner />}
                             >
                                 {data?.results?.map((item, index) => {
-                                    if (item.media_type === "person") return;
+                                    if (item.media_type === "person") return null;
                                     return (
                                         <MovieCard
                                             key={index}

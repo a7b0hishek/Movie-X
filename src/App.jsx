@@ -1,6 +1,6 @@
-import React,{useEffect } from "react";
+import React,{useEffect, useCallback } from "react";
 import  {fetchDataFromApi}  from "./utils/api";
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { getApiConfiguration ,getGenres} from "./store/homeSlice"
 import { BrowserRouter,Route,Routes} from "react-router-dom";
 import Header from "./components/header/Header"
@@ -10,17 +10,11 @@ import PageNotFound from "./pages/404/pageNotFound"
 import SearchResults from "./pages/searchResults/SearchResults"
 import Explore from "./pages/explore/Explore"
 import Home from "./pages/home/Home";
+
 function App() {
 const dispatch = useDispatch();
-const  { url } =useSelector((state)=>state.home);
 
- useEffect(
-  ()=>{
-    fetchapiconfig();
-    genresCall();
-  }
- ,[])
- const fetchapiconfig = () =>{
+const fetchapiconfig = useCallback(() =>{
   fetchDataFromApi("/configuration")
   .then((res) =>{
       // console.log(res)
@@ -33,10 +27,10 @@ const  { url } =useSelector((state)=>state.home);
        dispatch(getApiConfiguration(urlimg))
     }
   )
- }
+ }, [dispatch])
 
  //genres
- const genresCall= async()=>{
+ const genresCall = useCallback(async()=>{
    let promises =[]
    //we have two api call methods in promises movie and tv
    let endpoints =["tv","movie"]
@@ -55,14 +49,21 @@ const  { url } =useSelector((state)=>state.home);
   //  console.log(final_data[1]);
    final_data.map(({genres})=>{
     return genres.map((item) =>(allGenres[item.id]=item))
-    
    })
   //  console.log(allGenres)
 
   //save in state
   dispatch(getGenres(allGenres));
   
- }
+ }, [dispatch])
+
+ useEffect(
+  ()=>{
+    fetchapiconfig();
+    genresCall();
+  }
+ ,[fetchapiconfig, genresCall])
+
   return (
     <BrowserRouter>
     <Header/>
